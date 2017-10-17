@@ -26,5 +26,5 @@ api.StaticData
     return res.json(err);
   });
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3001);
 console.log('Running..');

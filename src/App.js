@@ -19,7 +19,7 @@ class App extends Component {
 
 class SummonerInfo extends Component {
   render() {
-    const URL = "http://ddragon.leagueoflegends.com/cdn/7.20.3/img/profileicon/";
+    const URL = "https://ddragon.leagueoflegends.com/cdn/7.20.3/img/profileicon/";
     if (this.props.name) {
       return (
         <div className="Summoner Info">
@@ -60,7 +60,7 @@ class Form extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    axios.get(`http://localhost:3001/api/${this.state.value}`)
+    axios.get(`https://localhost:3001/api/${this.state.value}`)
       .then(res => {
         console.log(res);
         this.setState({
