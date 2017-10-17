@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 app.get('/api/:summonerName', (req, res) => {
-api.Summoner
+  api.Summoner
     .gettingByName(req.params.summonerName)
     .then(data => {
         return res.json(data);
