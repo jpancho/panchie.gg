@@ -8,6 +8,7 @@
     "cors": "^2.8.4",
     "express": "^4.16.1",
     "gh-pages": "^1.0.0",
+    "heroku": "^0.2.0",
     "leaguejs": "^1.5.3",
     "react": "^16.0.0",
     "react-bootstrap": "latest",
@@ -19,10 +20,13 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
+    "start": "react-scripts start node Server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://jpancho.github.io/BattlefyRiotAPI"
+  "homepage": "https://jpancho.github.io/BattlefyRiotAPI",
+  "engines": {
+    "node": "7.10.0"
+  }
 }

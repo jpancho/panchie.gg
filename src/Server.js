@@ -17,14 +17,5 @@ app.get('/api/:summonerName', (req, res) => {
     });
 });
 
-api.StaticData
-  .gettingProfileIcons(req.params.summonerName)
-  .then(data => {
-    return res.json(data);
-  })
-  .catch(err => {
-    return res.json(err);
-  });
-
 app.listen(process.env.PORT || 3001);
 console.log('Running..');
