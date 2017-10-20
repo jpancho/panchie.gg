@@ -20,20 +20,17 @@ class App extends Component {
 class SummonerInfo extends Component {
   render() {
     const URL = "http://ddragon.leagueoflegends.com/cdn/7.20.3/img/profileicon/";
-    if (this.props.name) {
-      return (
+    if (!this.props.name) {
+      return null; 
+    } else {
+      return 
         <div className="Summoner Info">
-          <h4>{'Summoner: ' + this.props.name}</h4>
-          <h4>{'Level: ' + this.props.summonerLevel}</h4>
-          <h4><img className="image"
-                   src={URL + this.props.profileIconId + ".png"} />
+          <h4>Summoner: {this.props.name}</h4>
+          <h4>Level: {this.props.summonerLevel}</h4>
+          <h4>
+            <img className="image" src={URL + this.props.profileIconId + ".png"} />
           </h4>
         </div>
-      )
-    } else {
-      return (
-        <div />
-      )
     }
   }
 }
